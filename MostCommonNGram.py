@@ -6,7 +6,7 @@ from collections import Counter
 
 nltk.download('punkt_tab')
 filename = 'Data/The Fellowship Of The Ring.txt'
-ngram_size = 5
+ngram_size = 7
 
 ###########################################################################
 # Read the text file
@@ -41,4 +41,6 @@ for sentence in sentences:
 
 # Print the 1000 most common ngrams
 for ngram, count in ngram_counts.most_common(1000):
+    if count <= 2:
+        break
     print(f"{' '.join(ngram)}: {count}")
