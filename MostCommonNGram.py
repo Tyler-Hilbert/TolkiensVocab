@@ -1,5 +1,7 @@
 # Computes the most common n-grams for Tolkien.
 
+from Utils import read_filelist, preprocess_text, compute_ngram_counts
+
 import nltk
 from nltk import ngrams
 from collections import Counter
@@ -15,38 +17,13 @@ nltk.download('punkt_tab')
 
 ###########################################################################
 # Read the text files
-text = ''
-for filename in file_list:
-    with open(filename, 'r', encoding='latin-1') as file:
-        text = text + '\n' + file.read()
+text = read_filelist(file_list)
 
 # Preprocessing
-text = text.replace('_', '')
-text = text.replace (',', '')
-text = text.replace (';', '')
-text = text.replace (':', '')
-text = text.replace ('`', '')
-text = text.replace ('"', '')
-text = text.replace ("'", '') # TODO - is there a way to distinguish quotes for a quote with the character single quote?
-text = text.replace('-----------------------------------------------', '')
-text = text.replace('=====================================================', '')
-text = text.replace ('--', '')
-text = text.lower()
+text = preprocess_text(text)
 
-# Tokenize
-ngram_counts = Counter()
-# Sentence tokenize
-sentences = nltk.sent_tokenize(text)
-for sentence in sentences:
-    # "Preprocessing" (find a better way to remove these)
-    sentence = sentence.replace('.', '')
-    sentence = sentence.replace('!', '')
-    sentence = sentence.replace('?', '')
-    # Word tokenize
-    words = nltk.word_tokenize(sentence) # TODO - better tokenizer
-    ngram = ngrams(words, ngram_size)
-    #print (list(ngram))
-    ngram_counts.update(ngram)
+# Compute ngram counts
+ngram_counts = compute_ngram_counts(text, ngram_size)
 
 # Print the 1000 most common ngrams
 for ngram, count in ngram_counts.most_common(1000):
