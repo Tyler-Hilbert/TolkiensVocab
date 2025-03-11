@@ -4,23 +4,32 @@ import nltk
 from nltk import ngrams
 from collections import Counter
 
-nltk.download('punkt_tab')
-filename = 'Data/The Fellowship Of The Ring.txt'
+
+file_list = [
+    'Data/The Fellowship Of The Ring.txt',
+    'Data/The Two Towers.txt',
+    'Data/The Return Of The King.txt'
+]
 ngram_size = 7
+nltk.download('punkt_tab')
 
 ###########################################################################
-# Read the text file
-with open(filename, 'r', encoding='latin-1') as file:
-    text = file.read()
+# Read the text files
+text = ''
+for filename in file_list:
+    with open(filename, 'r', encoding='latin-1') as file:
+        text = text + '\n' + file.read()
 
 # Preprocessing
 text = text.replace('_', '')
 text = text.replace (',', '')
 text = text.replace (';', '')
+text = text.replace (':', '')
 text = text.replace ('`', '')
 text = text.replace ('"', '')
 text = text.replace ("'", '') # TODO - is there a way to distinguish quotes for a quote with the character single quote?
 text = text.replace('-----------------------------------------------', '')
+text = text.replace('=====================================================', '')
 text = text.replace ('--', '')
 text = text.lower()
 

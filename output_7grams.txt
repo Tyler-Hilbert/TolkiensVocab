@@ -1,3 +1,5 @@
+them all and in the darkness bind: 5
+all and in the darkness bind them: 5
 in the land of mordor where the: 4
 the land of mordor where the shadows: 4
 land of mordor where the shadows lie: 4
@@ -10,14 +12,19 @@ one ring to bring them all and: 4
 ring to bring them all and in: 4
 to bring them all and in the: 4
 bring them all and in the darkness: 4
-them all and in the darkness bind: 4
-all and in the darkness bind them: 4
 one ring to rule them all one: 3
 ring to rule them all one ring: 3
 to rule them all one ring to: 3
 rule them all one ring to find: 3
 them all one ring to find them: 3
 all one ring to find them one: 3
+by the banks of the great river: 3
+the history of the war of the: 3
+history of the war of the ring: 3
+part of the lord of the rings: 3
+the road goes ever on and on: 3
+now far ahead the road has gone: 3
+it is not to be wondered at: 3
 all that is gold does not glitter: 3
 that is gold does not glitter not: 3
 is gold does not glitter not all: 3
@@ -28,3 +35,8 @@ glitter not all those who wander are: 3
 not all those who wander are lost: 3
 i sit beside the fire and think: 3
 sit beside the fire and think of: 3
+the hands of the king are the: 3
+hands of the king are the hands: 3
+of the king are the hands of: 3
+the king are the hands of a: 3
+king are the hands of a healer: 3
