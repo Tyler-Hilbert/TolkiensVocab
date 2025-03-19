@@ -12,7 +12,8 @@ from nltk import word_tokenize, pos_tag
 file_list = [
     'Data/The Fellowship Of The Ring.txt',
     'Data/The Two Towers.txt',
-    'Data/The Return Of The King.txt'
+    'Data/The Return Of The King.txt',
+    'Data/The Hobbit.txt',
 ]
 nltk.download("averaged_perceptron_tagger_eng")
 

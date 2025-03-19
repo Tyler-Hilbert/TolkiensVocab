@@ -9,9 +9,10 @@ from collections import Counter
 file_list = [
     'Data/The Fellowship Of The Ring.txt',
     'Data/The Two Towers.txt',
-    'Data/The Return Of The King.txt'
+    'Data/The Return Of The King.txt',
+    'Data/The Hobbit.txt',
 ]
-ngram_size = 7
+ngram_size = 3
 nltk.download('punkt_tab')
 
 ### Main ###

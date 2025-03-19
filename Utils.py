@@ -22,6 +22,7 @@ def preprocess_text(text):
     text = text.replace ('"', '')
     text = text.replace ("'", '') # TODO - is there a way to distinguish quotes for a quote with the character single quote?
     text = text.replace ('--', '')
+    text = text.replace ('#', '')
     
     text = text.lower()
 
